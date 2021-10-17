@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto plius</title>
+    <title>Auto plus</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css" type="">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="./index.js" defer></script>
 </head>
 
@@ -20,40 +20,37 @@
                 <input id="model" type="text" placeholder="Modelis">
                 <input id="date" type="date" placeholder="Pagaminimo data">
                 <input id="color" type="text" placeholder="Spalva">
-                <input id="fuel" list="fuel" name="fuelTypes" placeholder="Kuro tipas">
-
-                <select name="" id="fuel">
-                    <option value="0">Diesel</option>
-                    <option value="1">Gasoline</option>
+                <select name="kuras" id="fuel">
+                    <option value="0">Dyzelinas</option>
+                    <option value="1">Benzinas</option>
                 </select>
 
-                <button id="button" type="button">Prideti</button>
+                <button id="save" type="button">Prideti</button>
             </form>
         </div>
 
-        <!-- <div class="form hide" id="update_car">
+        <div class="form hide" id="update_car">
             <form>
-                <input id="model" type="text" placeholder="Modelis">
-                <input id="date" type="date" placeholder="Pagaminimo data">
-                <input id="color" type="text" placeholder="Spalva">
-                <input id="fuel" list="fuel" name="fuelTypes" placeholder="Kuro tipas">
-                <datalist id="fuel">
-                    <option value="${Dyzelinas}">
-                    <option value="${Benzinas}">
-                </datalist>
+                <input id="updateModel" type="text" placeholder="Modelis">
+                <input id="updateDate" type="date" placeholder="Pagaminimo data">
+                <input id="updateColor" type="text" placeholder="Spalva">
+                <select id="updateFuel">
+                    <option value="0">Dyzelinas</option>
+                    <option value="1">Benzinas</option>
+                </select>
 
-                <button class="save" type="button">Atnaujinti</button>
+                <button id="updateSave" onclick="onSave()" type="button">Atnaujinti</button>
             </form>
-        </div> -->
+        </div>
 
     </div>
 
     <div class="right_clm">
 
         <div class="filters">
-            <button type="button">Visi automobiliai</button>
-            <button type="button">Dyzeliniai automobiliai</button>
-            <button type="button">Benzininiai automobiliai</button>
+            <button type="button" onclick="allCarsList()">Visi automobiliai</button>
+            <button type="button" onclick="dyzelCarsList()">Dyzeliniai automobiliai</button>
+            <button type="button" onclick="gasCarsList()">Benzininiai automobiliai</button>
         </div>
 
         <div class="titles">
@@ -67,7 +64,6 @@
 
         <div id="list">
         </div>
-
     </div>
 
 </body>
